@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início | Herlon Verissimo</title>
+<meta name="description" content="Portfólio pessoal de Herlon Verissimo, Profissional na area de Gestão Comercial.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="index.html">Herlon Verissimo</a>
+  <nav aria-label="Principal"><a href="index.html" aria-current="page">Início</a><a href="curriculo.html">Currículo</a><a href="formulario.html">Contato</a><a href="multimidia.html">Multimídia</a><a href="graficos.html">Gráficos</a></nav>
+  <button id="btn-tema" type="button" aria-label="Currículo">Tema</button>
+</header>
+<main>
+<section class="hero">
+  <h1>Olá, eu sou Herlon Verissimo.</h1>
+  <p>Profissional na area de Gestaõ Comercial. Aqui você encontra meu currículo, projetos e uma forma de falar comigo.</p>
+</section>
+<section class="bloco">
+  <h2>Minhas metas de estudo</h2>
+  <p class="ajuda">As metas ficam salvas neste navegador, mesmo depois de fechar a página.</p>
+  <form id="form-metas" class="linha" novalidate>
+    <label class="sr" for="nova-meta">Nova meta</label>
+    <input id="nova-meta" type="text" maxlength="80" placeholder="Ex.: Terminar o curso de JavaScript" required>
+    <button type="submit">Adicionar meta</button>
+  </form>
+  <p id="msg-metas" class="feedback" role="status" aria-live="polite"></p>
+  <ul id="lista-metas" class="metas"></ul>
+  <p id="contador-metas" class="ajuda"></p>
+  <button id="limpar-concluidas" type="button" class="secundario">Remover concluídas</button>
+</section>
+</main>
+<footer class="rodape"><p>© 2026 Herlon Verissimo. Feito com HTML, CSS e JavaScript.</p></footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>
