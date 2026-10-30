@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gráficos | Seu Nome</title>
+<meta name="description" content="Portfólio pessoal de Seu Nome, estudante de Front-End.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="index.html">Seu Nome</a>
+  <nav aria-label="Principal"><a href="index.html">Início</a><a href="curriculo.html">Currículo</a><a href="formulario.html">Contato</a><a href="multimidia.html">Multimídia</a><a href="graficos.html" aria-current="page">Gráficos</a></nav>
+  <button id="btn-tema" type="button" aria-label="Alternar tema">Tema</button>
+</header>
+<main>
+<section class="bloco">
+  <h1>Gráficos</h1>
+  <h2>Nível de conhecimento por tecnologia</h2>
+  <p class="ajuda">Valores em % (autoavaliação). Passe o mouse ou foque em uma barra para ver o valor.</p>
+  <div id="grafico" class="grafico" role="img" aria-label="Gráfico de barras com nível de conhecimento"></div>
+  <table class="tabela">
+    <caption>Dados do gráfico</caption>
+    <thead><tr><th>Tecnologia</th><th>Nível</th></tr></thead>
+    <tbody id="tabela-dados"></tbody>
+  </table>
+</section>
+</main>
+<footer class="rodape"><p>© 2026 Seu Nome. Feito com HTML, CSS e JavaScript.</p></footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>

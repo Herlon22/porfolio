@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato | Seu Nome</title>
+<meta name="description" content="Portfólio pessoal de Seu Nome, estudante de Front-End.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="index.html">Seu Nome</a>
+  <nav aria-label="Principal"><a href="index.html">Início</a><a href="curriculo.html">Currículo</a><a href="formulario.html" aria-current="page">Contato</a><a href="multimidia.html">Multimídia</a><a href="graficos.html">Gráficos</a></nav>
+  <button id="btn-tema" type="button" aria-label="Alternar tema">Tema</button>
+</header>
+<main>
+<section class="bloco">
+  <h1>Fale comigo</h1>
+  <form id="form-contato" novalidate>
+    <div class="campo">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3">
+      <small class="erro" id="erro-nome"></small>
+    </div>
+    <div class="campo">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <small class="erro" id="erro-email"></small>
+    </div>
+    <div class="campo">
+      <label for="assunto">Assunto</label>
+      <select id="assunto" name="assunto" required>
+        <option value="">Selecione</option>
+        <option>Oportunidade</option><option>Projeto</option><option>Dúvida</option>
+      </select>
+      <small class="erro" id="erro-assunto"></small>
+    </div>
+    <div class="campo">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required minlength="10"></textarea>
+      <small class="erro" id="erro-mensagem"></small>
+    </div>
+    <button type="submit">Enviar mensagem</button>
+    <p id="msg-form" class="feedback" role="status" aria-live="polite"></p>
+  </form>
+  <h2>Mensagens enviadas neste navegador</h2>
+  <ul id="lista-mensagens" class="lista"></ul>
+</section>
+</main>
+<footer class="rodape"><p>© 2026 Seu Nome. Feito com HTML, CSS e JavaScript.</p></footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>
