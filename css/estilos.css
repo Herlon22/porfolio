@@ -20,12 +20,10 @@ button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:.55rem 1.1
 button:hover{filter:brightness(1.1)}
 button.secundario,#btn-tema{background:transparent;color:var(--ink);border:1px solid var(--line)}
 input,select,textarea{font:inherit;width:100%;padding:.55rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
-.linha{display:flex;gap:.6rem}
 .campo{margin-bottom:1rem}.campo label{display:block;font-weight:600;margin-bottom:.25rem}
 .campo.invalido input,.campo.invalido select,.campo.invalido textarea{border-color:var(--warn)}
 .erro{display:block;color:var(--warn);min-height:1.1em;font-size:.88rem}
 .feedback{min-height:1.4em;font-weight:600}.feedback.ok{color:var(--ok)}.feedback.erro-msg{color:var(--warn)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .metas,.lista{list-style:none;padding:0;margin:.8rem 0}
 .metas li{display:flex;align-items:center;gap:.7rem;padding:.55rem 0;border-bottom:1px solid var(--line)}
 .metas li.feita span{text-decoration:line-through;color:var(--muted)}
@@ -43,5 +41,21 @@ audio,img{max-width:100%}img{height:auto;border-radius:8px}
 .tabela{width:100%;border-collapse:collapse;margin-top:1rem}
 .tabela th,.tabela td{text-align:left;padding:.4rem;border-bottom:1px solid var(--line)}
 .rodape{text-align:center;color:var(--muted);padding:1.5rem;border-top:1px solid var(--line);font-size:.9rem}
-@media(max-width:560px){.linha{flex-direction:column}.topo nav{margin-left:0}.barra{grid-template-columns:80px 1fr 40px}}
+@media(max-width:560px){.topo nav{margin-left:0}.barra{grid-template-columns:80px 1fr 40px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- Ajustes de integração com o Bootstrap (carregado antes deste arquivo) ---------- */
+a:hover{color:var(--accent)}
+.marca:hover{color:var(--ink)}
+caption{color:var(--muted)}
+.form-control,.form-select{background-color:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.form-control:focus,.form-select:focus{background-color:var(--bg);color:var(--ink);border-color:var(--accent);box-shadow:none}
+.form-control::placeholder{color:var(--muted);opacity:1}
+:root[data-tema="escuro"] .form-select{--bs-form-select-bg-img:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e8f1ef' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")}
+#form-metas button{white-space:nowrap}
+
+/* ---------- Link "Pular para o conteúdo" (acessibilidade por teclado) ---------- */
+.pular{position:absolute;left:-9999px;top:0}
+.pular:focus{left:.5rem;top:.5rem;z-index:10;padding:.6rem 1rem;border-radius:6px;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none}
+.pular:hover{color:var(--accent-ink)}
+main:focus{outline:none}
